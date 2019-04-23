@@ -2,10 +2,10 @@ class Dog
   attr_accessor :name, :breed, :age
   @@all = []
 
-  def initialize(attr)
-    attr.each do |attribute, value|
-      self.send("#{attribute}=", value)
-    end
+  def initialize(name, breed, age)
+    @name = name
+    @breed = breed
+    @age = age
     @@all << self
   end
 
